@@ -314,6 +314,9 @@ def createTable(df, tableTitle, name):
     Returns:
         df - dataframe containing the statistic with the inputted specifications
     """
+    if df.empty:
+        st.subheader('No results for this event.')
+        return
 
     # Reference: https://stackoverflow.com/questions/61453796/better-way-to-plot-a-dataframe-on-a-plotly-table
     fig = go.Figure(data=[go.Table(
