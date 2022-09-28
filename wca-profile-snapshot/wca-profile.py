@@ -313,6 +313,8 @@ def createTable(df, tableTitle, name):
         tableTitle - specified title for the table
     Returns:
         df - dataframe containing the statistic with the inputted specifications
+        OR
+        NULL if the dataframe is empty
     """
     if df.empty:
         st.subheader('No results for this event.')
